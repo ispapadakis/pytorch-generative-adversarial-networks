@@ -40,3 +40,5 @@ Success here is literally in the eye of the beholder. All resulting "fake" distr
 We call the sucess rate here **9.25/10**. We deem 0.50 points as lost in replication 1, where the right tail is too fat for triangular. Also, 0.25 points are lost in replication 6, as both tails are excessively fat.
 
 ### II. Conditional Expectations
+Again, the Generator part of GAN creates "fake" distributions with mode at 4, as desired. We call the success rate here **9.50/10**. In many cases, the resulting distributions show higher kurtosis than expected from a triangular distribution. Overall, Conditional Expectations appear to add to the reliability of this GAN.
+
