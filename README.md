@@ -17,6 +17,7 @@ Original GAN Success Rate is 8/10. We asked ourselves the question:
 **Can success rate be improved while the model remains parsimonious?**
 
 ## Research 2 Strategies for Success Rate Improvement
+All are work is shown in this [Jupyter Notebook](GAN_Pytorch.ipynb).
 
 ### I. Use Original Method (4 Moments) with Modifications
 - Simulate Triangular Distribution, not Gaussian (Triangular has fixed tails)
