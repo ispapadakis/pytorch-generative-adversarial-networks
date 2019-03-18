@@ -14,7 +14,7 @@ You might want to run this to get the original results:
 ```
 
 Original GAN Success Rate is 8/10. We asked ourselves the question:
-**Can this be improved while the model remains parsimonious?**
+**Can success rate be improved while the model remains parsimonious?**
 
 ## Research 2 Strategies for Success Rate Improvement
 
@@ -28,3 +28,15 @@ Original GAN Success Rate is 8/10. We asked ourselves the question:
 - Define Conditional Expectations using Torch clamp function, a variant of ReLU. Apply weights to increase their gradient close to boundary points.
 - Modify optimizer settings (SGD momentum)
 
+## RESULTS
+Measure success rate as done in our reference:
+- Observe distribution of "fake" images after 10 replications (each replication ends after 5,000 epochs)
+- Visually inspect "fake" image distribution histograms. 
+- Report how many times "fake" distributions would pass for triangular
+
+### I. 4-Moments Method
+Success here is literally in the eye of the beholder. All resulting "fake" distributions have a mode at their center, which is close to 4. They lie far from the original of a uniform distribution and much closer to the triangular distribution.
+
+We call the sucess rate here **9.25/10**. We deem 0.50 points as lost in replication 1, where the right tail is too fat for triangular. Also, 0.25 points are lost in replication 6, as both tails are excessively fat.
+
+### II. Conditional Expectations
